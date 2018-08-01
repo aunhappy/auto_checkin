@@ -43,6 +43,8 @@ function AutoCheckIn(account) {
         value: null,
         expires: null
     };
+	
+	this.msg = null;
 
     this.init();
 }
@@ -54,7 +56,11 @@ AutoCheckIn.prototype = {
         var that = this;
 
         that.checkIn(function () {
-            sendEmail(that.account.Email + '，签到完毕。 ' + new Date());
+			var content = {
+				email : that.account.Email,
+				msg : that.msg
+			};
+            sendEmail(that.msg);
             console.log('======', '签到完毕，' + that.account.Email, '======');
         });
     },
@@ -111,7 +117,8 @@ AutoCheckIn.prototype = {
                         console.error('======', err + '======');
                     }else{
                         console.log('======', JSON.parse(result.text).msg + '======');
-                        cb();
+                        that.msg = JSON.parse(result.text).msg;
+						cb();
                     } 
                 })
         });

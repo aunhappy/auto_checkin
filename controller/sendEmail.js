@@ -1,4 +1,5 @@
 var email = require('../config.js').email;
+var accounts = require('../config.js').accounts;
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
@@ -18,8 +19,8 @@ module.exports = function (contents) {
   transporter.sendMail({
     from: email.user,
     to: email.toUser,
-    subject: '签到成功！'+contents,
-    text: contents || 'is test!'
+    subject: contents,
+    text: accounts.Email + contents + new Date() || 'is test!'
   }, function (error, response) {
     if (error) {
       console.error(error);

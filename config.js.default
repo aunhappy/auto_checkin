@@ -10,6 +10,10 @@ module.exports = {
 		"host": 'smtp.qq.com',
 		"user": 'abc@qq.com',
 		"password": 'abc',
-		"toUser": 'abc@139.com'
+		"toUser": 'abc@qq.com'
+	},
+	"time":{
+		h: [08,12,20,14],
+		m: [15,35,55]
 	}
 };
