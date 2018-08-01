@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "later": "^1.2.0",
+    "nodemailer": "^4.6.7",
+    "superagent": "^3.8.3"
+  }
+}
