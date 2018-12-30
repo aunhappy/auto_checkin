@@ -1,0 +1,9 @@
+git clone git@github.com:aunhappy/auto_checkin.git
+git clone https://github.com/aunhappy/auto_checkin.git
+cd auto_checkin
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+cp config.js.default config.js
+vi config.js
+cnpm install
+cnpm install pm2
+pm2 start ecosystem.config.js
