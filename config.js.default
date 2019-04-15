@@ -1,25 +1,34 @@
 module.exports = {
+    //网站
+    "site": {
+        "host": 'https://example.com',
+        "loginUrl": '/auth/login',
+        "checkInUrl": '/user/checkin'
+    },
     // 账户
     "accounts": [
         {
-            "Email": 'abc@qq.com',
-            "Password": 'abc'
+            "Email": 'aa@qq.com',
+            "Password": 'xhbtyfjndtb',
+            "toUser": 'cc@139.com'
         },
         {
-            "Email": 'abc@qq.com',
-            "Password": 'abc'
+            "Email": 'bb@foxmail.com',
+            "Password": 'brnjdytzv',
+            "toUser": 'dd@189.cn'
         }
     ],
 
     // 邮件账户
     "email": {
         "host": 'smtp.qq.com',
-        "user": 'abc@qq.com',
-        "password": 'abc',
-        "toUser": 'abc@qq.com'
+        "user": 'aa@qq.com',
+        "password": 'gvftnjjghn',
+        "toUser": 'bfg@139.com'
     },
     "time":{
-        h: [08,12,20,14],
-        m: [15,35,55]
+        h: [18],
+        m: [38],
+        s: [25]
     }
 };

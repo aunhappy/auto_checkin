@@ -15,12 +15,12 @@ var transporter = nodemailer.createTransport({
  * 发送邮件
  * @param contents
  */
-module.exports = function (contents) {
+module.exports = function (accounts,msg) {
   transporter.sendMail({
     from: email.user,
-    to: email.toUser,
-    subject: contents,
-    text: accounts.Email + contents + new Date() || 'is test!'
+    to: accounts.toUser,
+    subject: 'poro '+msg,
+    text: accounts.Email + msg + new Date() || 'is test!'
   }, function (error, response) {
     if (error) {
       console.error(error);

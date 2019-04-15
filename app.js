@@ -4,14 +4,10 @@ var task = require('./controller/task');
 var autoCheckIn = require('./controller/autoCheckIn');
 
 // 定时执行
-task(time, function () {
-    autoCheckIn(accounts);
-});
-accounts.forEach(function (v) {
-        // 定时执行
-    task(time, function () {
-    autoCheckIn(v);
-});
-        return false;
-});
+//task(time, function () {
+	accounts.forEach(function (v) {
+        autoCheckIn(v);
+    });
+//});
+
 console.log('======', '自动签到服务运行中..', '======');
