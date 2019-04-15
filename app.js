@@ -7,8 +7,11 @@ var autoCheckIn = require('./controller/autoCheckIn');
 task(time, function () {
     autoCheckIn(accounts);
 });
-//accounts.forEach(function (v) {
-        
-//		return false;
-  //  });
+accounts.forEach(function (v) {
+        // 定时执行
+    task(time, function () {
+    autoCheckIn(v);
+});
+        return false;
+});
 console.log('======', '自动签到服务运行中..', '======');

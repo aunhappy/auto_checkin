@@ -1,19 +1,25 @@
 module.exports = {
-	// 账户
-	"accounts": {
-		"Email": 'abc@qq.com',
-		"Password": 'abc'
-	},
+    // 账户
+    "accounts": [
+        {
+            "Email": 'abc@qq.com',
+            "Password": 'abc'
+        },
+        {
+            "Email": 'abc@qq.com',
+            "Password": 'abc'
+        }
+    ],
 
-	// 邮件账户
-	"email": {
-		"host": 'smtp.qq.com',
-		"user": 'abc@qq.com',
-		"password": 'abc',
-		"toUser": 'abc@qq.com'
-	},
-	"time":{
-		h: [08,12,20,14],
-		m: [15,35,55]
-	}
+    // 邮件账户
+    "email": {
+        "host": 'smtp.qq.com',
+        "user": 'abc@qq.com',
+        "password": 'abc',
+        "toUser": 'abc@qq.com'
+    },
+    "time":{
+        h: [08,12,20,14],
+        m: [15,35,55]
+    }
 };
